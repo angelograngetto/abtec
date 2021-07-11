@@ -1,0 +1,144 @@
+.banner{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.area{
+  position: absolute;
+  top: 6rem;
+  right: 0;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.area > :global(svg){
+  margin-right: 0.4rem;
+}
+
+.area:hover{
+  opacity: 0.5;
+}
+
+.area_error{
+  position: absolute;
+  top: 9rem;
+  color: rgb(247, 55, 55);
+  right: 0;
+  font-size: 0.6rem;
+}
+
+.banner::after{
+  content:'';
+  position: absolute;
+  top: 30%;
+  width: 20rem;
+  height: 20rem;
+  background: #f1a330;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.2;
+  filter: blur(1.2rem);
+  animation: size 5s infinite;
+}
+
+.banner::before{
+  content:'';
+  position: absolute;
+  top: 20%;
+  width: 20rem;
+  height: 20rem;
+  background: #60beaf;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.2;
+  filter: blur(1.2rem);
+  animation: size 5s infinite;
+}
+
+@keyframes size {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.banner h1{
+  letter-spacing: 0.15rem;
+  text-align: center;
+  font-size: 1.5rem;
+
+}
+
+.banner h1 b{
+  color: #f1a330;
+  font-size: 4rem;
+  line-height: 3.5rem;
+}
+
+.banner p{
+  font-size: 0.7rem;
+}
+
+.social{
+  display: flex;
+  list-style: none;
+  margin: 1rem;
+}
+
+.social li{
+  margin: 0 0.5rem;
+}
+
+.social li:hover{
+  opacity: 0.5;
+}
+
+.conocenos{
+  z-index:-1;
+  margin-top: 4rem;
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  text-decoration: none;
+  border: 0.1rem solid #fff;
+  border-radius: 0.8rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  animation: conocenos 5s infinite;
+}
+
+@keyframes conocenos {
+  0%{
+    transform: translateY(0%)
+  }
+  50%{
+    transform: translateY(50%)
+  }
+  100%{
+    transform: translateY(0%)
+  }
+}
+
+@media screen and (max-width: 494px) {
+  .banner h1{
+    font-size: 1rem;
+    line-height: 3rem;
+  }
+}

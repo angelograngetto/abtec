@@ -1,0 +1,100 @@
+.clients{
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+
+.clients a{
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: auto;
+  margin-top: 8rem;
+  padding: 1rem;
+  text-align: center;
+  border: 0.2rem solid #fff;
+  width: 50%;
+  border-radius: 1rem;
+  /* animation: flash 2s infinite linear; */
+}
+
+
+.review{
+  margin: auto;
+  margin-top: 4rem;
+  color: #494949;
+  width: 65%;
+  font-style: italic;
+  height: 3rem;
+}
+
+
+
+.review p::after{
+  content: '"'
+}
+.review p::before{
+  content: '"'
+}
+.review p{
+  text-align: center;
+}
+
+
+@keyframes flash {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.clients a:hover{
+  opacity: 0.3;
+}
+
+.clients__cards{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.clients__card{
+  max-width: 200px;
+  scroll-snap-align:start;
+}
+
+.clients__card:hover{
+  transform: scale(1.1);
+}
+
+.clients__card img{
+  border-radius: 1rem 1rem 0 0;
+}
+
+.clients__card small{
+  padding: 1rem;
+  margin-top: -1rem;
+  display: block;
+  color: #101010;
+  background: #fff;
+  border-radius: 0 0 1rem 1rem;
+  height: 4rem;
+}
+
+@media screen and (max-width:1000px) {
+  .clients__cards{
+    justify-content: start;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+
+  .clients a{
+    width: 80%;
+  }
+}
